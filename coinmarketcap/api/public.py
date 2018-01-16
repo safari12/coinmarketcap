@@ -31,3 +31,12 @@ class Public:
             endpoint='ticker/' + coin,
             params=params
         )
+
+    def get_global_stats(self, **kwargs):
+        params = {}
+        params.update(kwargs)
+
+        return self.__request(
+            endpoint='global/',
+            params=params
+        )

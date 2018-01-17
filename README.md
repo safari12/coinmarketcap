@@ -26,13 +26,13 @@ from coinmarketcap import api
 public_api = api.Public()
 
 # get tickers for a coin
-tickers = public_api.get_tickers(coin='bitcoin')
+tickers = public_api.get_tickers(coin='bitcoin').json()
 
 # get all tickers
-tickers = public_api.get_tickers()
+tickers = public_api.get_tickers().json()
 
 # get global stats
-global_stats = public_api.get_global_stats()
+global_stats = public_api.get_global_stats().json()
 ```
 
 Documentation

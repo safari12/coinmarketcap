@@ -1,9 +1,44 @@
 # coinmarketcap
-Coinmarketcap Wrapper
 
-## API Module
+Description
+-----------
+Coinmarketcap Client Wrapper
 
-### Public Methods
+Installation
+------------
+
+```bash
+// clone through ssh
+git clone git@github.com:safari12/coinmarketcap.git 
+
+// clone through https
+git clone https://github.com/safari12/coinmarketcap.git
+
+cd coinmarketcap
+python setup.py install
+```
+
+Usage Examples
+--------------
+
+```python
+from coinmarketcap import api
+public_api = api.Public()
+
+# get tickers for a coin
+tickers = public_api.get_tickers(coin='bitcoin')
+
+# get all tickers
+tickers = public_api.get_tickers()
+
+# get global stats
+global_stats = public_api.get_global_stats()
+```
+
+Documentation
+-------------
+
+#### API Module Public Methods
 
 `get_tickers`
 - description: `gets tickers from the market`
